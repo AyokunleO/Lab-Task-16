@@ -11,19 +11,54 @@
         <li><a href="armstrong.html">Armstrong</a></li>
     </ul>
     <script>
-        var inputNum = parseInt(prompt(" Enter any value"));
-        for(var i = 0; i < inputNum; i++)
+        // var inputNum = parseInt(prompt(" Enter any value"));
+        // for(var i = 0; i < inputNum; i++)
+        // {
+        //     if(inputNum >= 100 && inputNum == inputNum){
+        //         if(i % 2 != 0){
+        //         document.write(`"${i} is odd" <br>`);
+        //         }else{
+        //         document.write(`"${i} is even" <br>`);
+        //     }
+        //     }else{
+        //         var inputNum = parseInt(prompt(" Enter any value"));
+
+        //     }
+        // }
+
+        // Another approach
+        var entry;
+        var counter = 1;
+        for(var i = 0; i < counter; i++)
         {
-            if(inputNum >= 100 && inputNum == inputNum){
-                if(i % 2 != 0){
-                document.write(`"${i} is odd" <br>`);
-                }else{
+            entry = parseInt(prompt("enter any number"));
+            if (entry != entry || entry < 100 || entry > 1000)
+            {
+                i--;
+                continue;
+            } else {
+                for(i = 0; i < entry; i++)
+                {
+                    if(i % 2 == 0){
                 document.write(`"${i} is even" <br>`);
-            }
-            }else{
-                var inputNum = parseInt(prompt(" Enter any value"));
+                }else{
+                document.write(`"${i} is odd" <br>`);
+                }
             }
         }
+    }
+
+
+        // // Do while loop
+        // var entry, x;
+        //     do {
+        //             entry = parseInt(prompt(`Enter an endpoint of atleast 100`)); 
+        //     } while ((entry != entry) || entry < 100 || entry > 1000);
+        //     for (let i=0; i<=entry; i++){
+        //         if(i%2 == 0){ document.write(`${i} is even <br>`)}
+        //         else{ document.write(`${i} is odd <br>`) };
+        //     }
+
 
         // var inputNum = parseInt(prompt(" Enter any value"));
         // var result = " ";
