@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Calculation</title>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">First</a>/li>
+        <li><a href="armstrong.html">Armstrong</a></li>
+    </ul>
+    <script>
+        for(i=100; i < 1000; i++)
+        {
+            var a, b, c;
+            a = parseInt(i / 100);
+            b = parseInt((i-a*100)/10);
+            c = parseInt((i-a*100)%10);
+
+            if(a**3 + b**3 + c**3 == i){
+                document.write(i + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>
