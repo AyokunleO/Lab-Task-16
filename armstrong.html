@@ -7,21 +7,45 @@
 </head>
 <body>
     <ul>
-        <li><a href="index.html"></a> First</li>
-        <li><a href="armstrong.html"></a>Armstrong</li>
+        <li><a href="index.html">First</a></li>
+        <li><a href="armstrong.html">Armstrong</a></li>
     </ul>
     <script>
-        for(i=100; i < 1000; i++)
-        {
-            var a, b, c;
-            a = parseInt(i / 100);
-            b = parseInt((i-a*100)/10);
-            c = parseInt((i-a*100)%10);
+        // for(i=100; i < 1000; i++)
+        // {
+        //     var a, b, c;
+        //     a = parseInt(i / 100);
+        //     b = parseInt((i-a*100)/10);
+        //     c = parseInt((i-a*100)%10);
 
-            if(a**3 + b**3 + c**3 == i){
-                document.write(i + "<br>");
-            }
+        //     if(a**3 + b**3 + c**3 == i){
+        //         document.write(i + "<br>");
+        //     }
+        // }
+    </script>
+    <script>
+        var inputNum;
+        var counter = 1;
+        for(var i = 0; i < counter; i++)
+        {
+            inputNum = parseInt(prompt("enter any number"));
+            if (inputNum != inputNum || inputNum < 100 || inputNum >= 1000)
+            {
+                i--;
+                continue;
+            } else {
+                var a, b, c;
+            a = parseInt(inputNum / 100);
+            b = parseInt((inputNum-a*100)/10);
+            c = parseInt((inputNum-a*100)%10);
+               
+                if(a**3 + b**3 + c**3 == inputNum){
+                document.write(inputNum + " is amstrong" + "<br>");
+            }else{
+                document.write(inputNum + " is not amstrong" + "<br>");
+                } 
         }
+    }
     </script>
 </body>
 </html>
